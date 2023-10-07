@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import logo from "../../assets/logo.png";
 const Navbar = () => {
     return (
-        <div className="backdrop-blur-lg bg-white/60">
+        <div className="backdrop-blur-lg bg-white/60 sticky top-0 z-50">
             <div className="container mx-auto">
                 <div className="flex justify-between items-center py-8">
                     <div className="">

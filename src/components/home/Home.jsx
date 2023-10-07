@@ -1,5 +1,6 @@
 import Services from "../services/Services";
 import Banner from "./Banner";
+import FnQ from "./FnQ";
 import Gallery from "./Gallery";
 
 const Home = () => {
@@ -8,6 +9,7 @@ const Home = () => {
             <Banner />
             <Services />
             <Gallery />
+            <FnQ />
         </div>
     );
 };
