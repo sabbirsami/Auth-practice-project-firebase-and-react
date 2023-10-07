@@ -2,6 +2,7 @@ import Services from "../services/Services";
 import Banner from "./Banner";
 import FnQ from "./FnQ";
 import Gallery from "./Gallery";
+import Testimonials from "./Testimonials";
 
 const Home = () => {
     return (
@@ -9,6 +10,7 @@ const Home = () => {
             <Banner />
             <Services />
             <Gallery />
+            <Testimonials />
             <FnQ />
         </div>
     );
