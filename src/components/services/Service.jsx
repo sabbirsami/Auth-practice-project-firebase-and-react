@@ -4,7 +4,12 @@ import { Link } from "react-router-dom";
 
 function Service({ service }) {
     return (
-        <div className="rounded-lg">
+        <div className="rounded-lg relative">
+            {service.hot && (
+                <span className="py-1 px-2 text-sm text-white rounded-xl bg-rose-500 absolute -top-4 right-12 border-2 border-white ">
+                    Hot
+                </span>
+            )}
             <div
                 className={`p-8 rounded-lg ${
                     service.hot ? "bg-emerald-600 text-white pt-16" : ""
