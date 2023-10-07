@@ -11,16 +11,24 @@ const Navbar = () => {
                     <nav className="">
                         <ul className="flex gap-6">
                             <li>
-                                <NavLink to={"/"}>Home</NavLink>
+                                <NavLink className={"pb-3"} to={"/"}>
+                                    Home
+                                </NavLink>
                             </li>
                             <li>
-                                <NavLink to={"/events"}>Events</NavLink>
+                                <NavLink className={"pb-3"} to={"/events"}>
+                                    Events
+                                </NavLink>
                             </li>
                             <li>
-                                <NavLink to={"/about"}>About Us</NavLink>
+                                <NavLink className={"pb-3"} to={"/about"}>
+                                    About Us
+                                </NavLink>
                             </li>
                             <li>
-                                <NavLink to={"/contact"}>Contact Us</NavLink>
+                                <NavLink className={"pb-3"} to={"/contact"}>
+                                    Contact Us
+                                </NavLink>
                             </li>
                         </ul>
                     </nav>

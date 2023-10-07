@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "hot": false,
+        "price": 200,
+        "name": "Birthday Parties",
+        "short_detail": "For weddings with basic plan and limited item",
+        "features": [
+            "Full space access",
+            "Give cake as demands",
+            "management support",
+            "Decoration design",
+            "Billed as shift"
+        ],
+        "details": "Event Planner is currently offering full service wedding planning packages. Our team will be your advocate throughout the entire wedding planning process to create a unique experience for your guests, ensuring that your celebration is unforgettable. With expertise in investment management, event design and styling, and planning and execution, our goal is to save you time and resources  as we design, build, and execute every element of your wedding. As your planner, we invite you to be as hands-on as you would like as you trust us to bring your wedding vision to life. We strive for it to be the best possible experience it can be, for both you and your family and friends. Together, we can plan an experience of a lifetime."
+    },
+    {
+        "id": 2,
+        "hot": false,
+        "price": 500,
+        "name": "Wedding basic",
+        "short_detail": "For weddings with basic plan and limited item",
+        "features": [
+            "Full space access",
+            "Food arrangement",
+            "management support",
+            "Decoration design",
+            "Billed as shift"
+        ],
+        "details": "Event Planner is currently offering full service wedding planning packages. Our team will be your advocate throughout the entire wedding planning process to create a unique experience for your guests, ensuring that your celebration is unforgettable. With expertise in investment management, event design and styling, and planning and execution, our goal is to save you time and resources  as we design, build, and execute every element of your wedding. As your planner, we invite you to be as hands-on as you would like as you trust us to bring your wedding vision to life. We strive for it to be the best possible experience it can be, for both you and your family and friends. Together, we can plan an experience of a lifetime."
+    },
+    {
+        "id": 3,
+        "hot": true,
+        "price": 800,
+        "name": "Wedding plus",
+        "short_detail": "For most weddings with premium plans",
+        "features": [
+            "Full space access",
+            "Dedicated team",
+            "Buffet food",
+            "premium Decoration",
+            "pay as plan "
+        ],
+        "details": "Event Planner is currently offering full service wedding planning packages. Our team will be your advocate throughout the entire wedding planning process to create a unique experience for your guests, ensuring that your celebration is unforgettable. With expertise in investment management, event design and styling, and planning and execution, our goal is to save you time and resources  as we design, build, and execute every element of your wedding. As your planner, we invite you to be as hands-on as you would like as you trust us to bring your wedding vision to life. We strive for it to be the best possible experience it can be, for both you and your family and friends. Together, we can plan an experience of a lifetime."
+    },
+    {
+        "id": 4,
+        "hot": false,
+        "price": 300,
+        "name": "Business fair",
+        "short_detail": "For most businesses event like book fair, craft fair.",
+        "features": [
+            "limited space access",
+            "Secuirty facility",
+            "event support",
+            "Decoration design",
+            "Per day bill "
+        ],
+        "details": "Event Planner is currently offering full service Business fair packages. Our team will be your advocate throughout the entire Business fair process to create a unique experience for your guests, ensuring that your celebration is unforgettable. With expertise in investment management, event design and styling, and planning and execution, our goal is to save you time and resources  as we design, build, and execute every element of your wedding. As your planner, we invite you to be as hands-on as you would like as you trust us to bring your wedding vision to life. We strive for it to be the best possible experience it can be, for both you and your family and friends. Together, we can plan an experience of a lifetime."
+    },
+    {
+        "id": 5,
+        "hot": false,
+        "price": 1200,
+        "name": "Corporate event",
+        "short_detail": "For most corporate business events with unique experience",
+        "features": [
+            "Full space access",
+            "Dedicated team",
+            "Buffet food",
+            "premium Decoration",
+            "pay as plan "
+        ],
+        "details": "Event Planner is currently offering full service Corporate event packages. Our team will be your advocate throughout the entire Corporate event process to create a unique experience for your guests, ensuring that your celebration is unforgettable. With expertise in investment management, event design and styling, and planning and execution, our goal is to save you time and resources  as we design, build, and execute every element of your wedding. As your planner, we invite you to be as hands-on as you would like as you trust us to bring your wedding vision to life. We strive for it to be the best possible experience it can be, for both you and your family and friends. Together, we can plan an experience of a lifetime."
+    },
+    {
+        "id": 6,
+        "hot": false,
+        "price": 800,
+        "name": "Engagement Party",
+        "short_detail": "For most weddings with premium plans",
+        "features": [
+            "Full space access",
+            "Food arrangement",
+            "Buffet food",
+            "premium Decoration",
+            "pay as plan "
+        ],
+        "details": "Event Planner is currently offering full service Engagement Parties packages. Our team will be your advocate throughout the entire Engagement Parties process to create a unique experience for your guests, ensuring that your celebration is unforgettable. With expertise in investment management, event design and styling, and planning and execution, our goal is to save you time and resources  as we design, build, and execute every element of your wedding. As your planner, we invite you to be as hands-on as you would like as you trust us to bring your wedding vision to life. We strive for it to be the best possible experience it can be, for both you and your family and friends. Together, we can plan an experience of a lifetime."
+    }
+]

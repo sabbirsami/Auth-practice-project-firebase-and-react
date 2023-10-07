@@ -10,6 +10,10 @@ body {
 .heading-font {
     font-family: "Playfair Display", serif !important;
 }
+a.active {
+    color: #416446;
+    border-bottom: 2px solid #416446;
+}
 .banner-bg {
     background-image: url(./assets/banner.jpg);
     background-repeat: no-repeat;

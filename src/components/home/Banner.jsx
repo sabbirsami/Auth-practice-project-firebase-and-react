@@ -14,6 +14,7 @@ const Banner = () => {
                     </h1>
                 </div>
                 <div className="md:pt-32 bottom-0">
+                    <h2 className="text-sm pb-2">Some of our events photo*</h2>
                     <div className="carousel w-full">
                         <div
                             id="slide1"
