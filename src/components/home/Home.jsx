@@ -1,9 +1,11 @@
+import Banner from "./Banner";
 import Navbar from "./Navbar";
 
 const Home = () => {
     return (
-        <div>
+        <div className="">
             <Navbar />
+            <Banner />
         </div>
     );
 };

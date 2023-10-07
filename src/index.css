@@ -7,3 +7,10 @@ body {
     font-family: "Playfair Display", serif;
     font-family: "Poppins", sans-serif;
 }
+.heading-font {
+    font-family: "Playfair Display", serif !important;
+}
+.banner-bg {
+    background-image: url(./assets/banner.jpg);
+    background-repeat: no-repeat;
+}
