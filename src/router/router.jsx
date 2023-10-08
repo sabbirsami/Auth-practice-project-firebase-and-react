@@ -6,11 +6,13 @@ import Login from "../components/shared/Login";
 import Register from "../components/shared/Register";
 import ConfirmService from "../components/services/ConfirmService";
 import PrivateRoute from "../components/shared/PrivateRoute";
+import Error from "../components/shared/Error";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <Root></Root>,
+        errorElement: <Error />,
         children: [
             {
                 path: "/",
