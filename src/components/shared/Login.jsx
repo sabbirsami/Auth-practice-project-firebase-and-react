@@ -1,8 +1,30 @@
+import { useContext } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
+import { AuthContext } from "./AuthProvider";
+import toast from "react-hot-toast";
 const Login = () => {
+    const { signInWithGoogle } = useContext(AuthContext);
+    const handleSignInWithGoogle = () => {
+        signInWithGoogle()
+            .then((result) => {
+                const user = result.user;
+                console.log(user);
+                toast.success("Successfully Login", {
+                    duration: 2000,
+                    className: "mt-32",
+                });
+            })
+            .catch((err) => {
+                console.log(err);
+                toast.error(" Login fail", {
+                    duration: 2000,
+                    className: "mt-32",
+                });
+            });
+    };
     return (
-        <div className="container mx-auto mb-32 mt-14">
+        <div className="container mx-auto mb-32 ">
             <h2 className="text-5xl heading-font md:pb-10 text-center">
                 Login your account
                 <span className="divider w-28 border p-0  h-1 mx-auto bg-green-700"></span>
@@ -43,6 +65,7 @@ const Login = () => {
                     </form>
                     <div className="divider">OR</div>
                     <button
+                        onClick={handleSignInWithGoogle}
                         type="submit"
                         className="w-full flex items-center justify-center gap-3 py-3 border border-emerald-500 text-dark"
                     >

@@ -5,13 +5,14 @@ import { initializeApp } from "firebase/app";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+console.log(import.meta.env.KEY_APIKEY);
 const firebaseConfig = {
-    apiKey: import.meta.env.apiKey,
-    authDomain: import.meta.env.authDomain,
-    projectId: import.meta.env.projectId,
-    storageBucket: import.meta.env.storageBucket,
-    messagingSenderId: import.meta.env.messagingSenderId,
-    appId: import.meta.env.appId,
+    apiKey: "AIzaSyC1IiuWrREwwBIgX-jvQuLGI7i8CRg54ss",
+    authDomain: "best-event-planner.firebaseapp.com",
+    projectId: "best-event-planner",
+    storageBucket: "best-event-planner.appspot.com",
+    messagingSenderId: "778489870700",
+    appId: "1:778489870700:web:5a8c120501c26f1d705b49",
 };
 
 // Initialize Firebase
