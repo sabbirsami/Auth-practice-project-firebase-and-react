@@ -15,19 +15,15 @@ const Navbar = () => {
                                     Home
                                 </NavLink>
                             </li>
-                            <li>
-                                <NavLink className={"pb-3"} to={"/events"}>
-                                    Events
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink className={"pb-3"} to={"/about"}>
-                                    About Us
-                                </NavLink>
-                            </li>
+
                             <li>
                                 <NavLink className={"pb-3"} to={"/contact"}>
                                     Contact Us
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink className={"pb-3"} to={"/login"}>
+                                    Login
                                 </NavLink>
                             </li>
                         </ul>
