@@ -10,7 +10,7 @@ const Services = () => {
             .then((res) => res.json())
             .then((data) => setServices(data));
     }, []);
-    console.log(services);
+
     return (
         <div className="container mx-auto md:py-32 py-6 ">
             <h2 className="text-5xl heading-font md:pb-10 text-center">

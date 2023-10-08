@@ -4,6 +4,7 @@ import Home from "../components/home/Home";
 import ServiceDetails from "../components/services/ServiceDetails";
 import Login from "../components/shared/Login";
 import Register from "../components/shared/Register";
+import ConfirmService from "../components/services/ConfirmService";
 
 const router = createBrowserRouter([
     {
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home />,
+            },
+            {
+                path: "/order",
+                element: <ConfirmService />,
             },
             {
                 path: "/service/:serviceId",

@@ -1,12 +1,15 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { useContext, useState } from "react";
 import { AuthContext } from "./AuthProvider";
 import toast from "react-hot-toast";
+import { updateProfile } from "firebase/auth";
+import auth from "../../firebase.config";
 
 const Register = () => {
     const { signInWithGoogle, createUser } = useContext(AuthContext);
 
+    const navigate = useNavigate();
     const [loading, setLoading] = useState(false);
     const [showPasswordValidationMessage, setShowPasswordValidationMessage] =
         useState("");
@@ -18,6 +21,8 @@ const Register = () => {
         const checkPassword =
             /^(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/;
 
+        const name = e.target.name.value;
+        const photo = e.target.photo.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
 
@@ -27,12 +32,17 @@ const Register = () => {
                 .then((result) => {
                     const user = result.user;
                     console.log(user);
-                    setLoading(false);
+                    updateProfile(auth.currentUser, {
+                        displayName: name,
+                        photoURL: photo,
+                    });
                     toast.success("Successfully Register", {
                         duration: 2000,
                         className: "mt-32",
                     });
+                    setLoading(false);
                     setAlreadyUsedEmailMessage("");
+                    navigate("/");
                 })
                 .catch((err) => {
                     console.log(err);
@@ -61,6 +71,7 @@ const Register = () => {
                     className: "mt-32",
                 });
                 setAlreadyUsedEmailMessage("");
+                navigate("/");
             })
             .catch((err) => {
                 console.log(err);
@@ -84,7 +95,7 @@ const Register = () => {
                             htmlFor="name"
                             className="block w-96 pb-2 font-semibold"
                         >
-                            Email address
+                            Name
                         </label>
                         <input
                             type="text"
@@ -92,6 +103,19 @@ const Register = () => {
                             required
                             className="border w-full py-3  px-4 bg-slate-100"
                             placeholder="Enter your name"
+                        />
+                        <label
+                            htmlFor="email"
+                            className="block w-96 pb-2  pt-8 font-semibold"
+                        >
+                            Photo URL
+                        </label>
+                        <input
+                            type="text"
+                            name="photo"
+                            required
+                            className="border w-full py-3 px-4 bg-slate-100"
+                            placeholder="Enter your photo URL"
                         />
                         <label
                             htmlFor="email"

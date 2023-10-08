@@ -1,11 +1,12 @@
 import { useContext, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "./AuthProvider";
 import toast from "react-hot-toast";
 const Login = () => {
     const { signInWithGoogle, loginUser } = useContext(AuthContext);
 
+    const navigate = useNavigate();
     const [loading, setLoading] = useState(false);
     const [alreadyUsedEmailMessage, setAlreadyUsedEmailMessage] = useState("");
 
@@ -24,6 +25,7 @@ const Login = () => {
                     duration: 2000,
                     className: "mt-32",
                 });
+                navigate("/");
             })
             .catch((err) => {
                 console.log(err);
@@ -44,6 +46,7 @@ const Login = () => {
                     duration: 2000,
                     className: "mt-32",
                 });
+                navigate("/");
             })
             .catch((err) => {
                 console.log(err);
