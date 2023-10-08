@@ -1,12 +1,25 @@
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 const FnQ = () => {
+    useEffect(() => {
+        AOS.init();
+        AOS.refresh();
+    }, []);
     return (
         <div className="container mx-auto py-32 ">
-            <h2 className="text-5xl heading-font md:pb-10 text-center">
+            <h2
+                className="text-5xl heading-font md:pb-10 text-center"
+                data-aos="fade-up"
+            >
                 Frequently Asked Questions
                 <span className="divider w-28 border p-0  h-1 mx-auto bg-green-700"></span>
             </h2>
             <div className="join join-vertical w-full">
-                <div className="collapse collapse-arrow join-item border border-base-300">
+                <div
+                    className="collapse collapse-arrow join-item border border-base-300"
+                    data-aos="fade-up"
+                >
                     <input
                         type="radio"
                         name="my-accordion-4"
@@ -30,7 +43,10 @@ const FnQ = () => {
                         </p>
                     </div>
                 </div>
-                <div className="collapse collapse-arrow join-item border border-base-300">
+                <div
+                    className="collapse collapse-arrow join-item border border-base-300"
+                    data-aos="fade-up"
+                >
                     <input type="radio" name="my-accordion-4" />
                     <div className="collapse-title text-xl font-medium">
                         How early do we need to start planning an event
@@ -49,7 +65,10 @@ const FnQ = () => {
                         </p>
                     </div>
                 </div>
-                <div className="collapse collapse-arrow join-item border border-base-300">
+                <div
+                    className="collapse collapse-arrow join-item border border-base-300"
+                    data-aos="fade-up"
+                >
                     <input type="radio" name="my-accordion-4" />
                     <div className="collapse-title text-xl font-medium">
                         What is your refund and cancellation policy?
@@ -68,7 +87,10 @@ const FnQ = () => {
                         </p>
                     </div>
                 </div>
-                <div className="collapse collapse-arrow join-item border border-base-300">
+                <div
+                    className="collapse collapse-arrow join-item border border-base-300"
+                    data-aos="fade-up"
+                >
                     <input type="radio" name="my-accordion-4" />
                     <div className="collapse-title text-xl font-medium">
                         How do you keep budgets on track?

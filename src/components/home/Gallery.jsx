@@ -4,6 +4,9 @@ import img3 from "../../assets/eventimg18.jpg";
 import img4 from "../../assets/eventimg.jpg";
 import img5 from "../../assets/eventimg3.jpg";
 import img6 from "../../assets/event4.jpg";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 const Gallery = () => {
     const images = [
         {
@@ -31,13 +34,23 @@ const Gallery = () => {
             img: img6,
         },
     ];
+    useEffect(() => {
+        AOS.init();
+        AOS.refresh();
+    }, []);
     return (
         <div className="">
-            <h2 className="text-5xl heading-font md:pb-10 text-center">
+            <h2
+                className="text-5xl heading-font md:pb-10 text-center"
+                data-aos="fade-up"
+            >
                 Photo Gallery
                 <span className="divider w-28 border p-0  h-1 mx-auto bg-green-700"></span>
             </h2>
-            <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
+            <div
+                className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1"
+                data-aos="fade-up"
+            >
                 {images.map((img, idx) => (
                     <div key={idx} className="">
                         <img

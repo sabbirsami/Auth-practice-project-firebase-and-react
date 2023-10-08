@@ -3,13 +3,24 @@ import event2 from "../../assets/event2.jpg";
 import event3 from "../../assets/event02.jpg";
 import event4 from "../../assets/event3.jpg";
 import event5 from "../../assets/event4.jpg";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const Banner = () => {
+    useEffect(() => {
+        AOS.init();
+        AOS.refresh();
+    }, []);
+
     return (
         <div className="container mx-auto">
             <div className="lg:flex  block justify-between gap-10">
                 <div className="lg:py-16 py-4">
-                    <h1 className="lg:text-8xl md:text-6xl text-4xl font-semibold heading-font lg:py-32 py-4 px-1">
+                    <h1
+                        className="lg:text-8xl md:text-6xl text-4xl font-semibold heading-font lg:py-32 py-4 px-1"
+                        data-aos="fade-up"
+                    >
                         Best Event Management Team in Dhaka City
                     </h1>
                 </div>

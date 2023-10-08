@@ -1,7 +1,10 @@
+import { useEffect } from "react";
 import people1 from "../../assets/people1.png";
 import people2 from "../../assets/people2.png";
 import people3 from "../../assets/people3.png";
 import Testimonial from "./Testimonial";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Testimonials = () => {
     const reviews = [
@@ -41,14 +44,24 @@ const Testimonials = () => {
             img: "http://denticare.bold-themes.com/oscar/wp-content/uploads/sites/15/2020/01/client-03-160x160.jpg",
         },
     ];
+    useEffect(() => {
+        AOS.init();
+        AOS.refresh();
+    }, []);
     return (
         <div className="container mx-auto pt-32">
-            <h2 className="text-5xl heading-font md:pb-10 text-center">
+            <h2
+                className="text-5xl heading-font md:pb-10 text-center"
+                data-aos="fade-up"
+            >
                 Testimonial
                 <span className="divider w-28 border p-0  h-1 mx-auto bg-green-700"></span>
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 place-content-center place-items-center lg:px-14 px-4 mx-auto justify-center">
+            <div
+                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 place-content-center place-items-center lg:px-14 px-4 mx-auto justify-center"
+                data-aos="fade-up"
+            >
                 {reviews.map((testimonial) => (
                     <Testimonial
                         key={testimonial._id}

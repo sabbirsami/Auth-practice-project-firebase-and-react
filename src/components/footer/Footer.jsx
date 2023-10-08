@@ -1,8 +1,15 @@
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 const Footer = () => {
+    useEffect(() => {
+        AOS.init();
+        AOS.refresh();
+    }, []);
     return (
         <div>
             <footer className="footer footer-center p-10 bg-black text-white rounded py-32">
-                <nav>
+                <nav data-aos="fade-up">
                     <div className="grid grid-flow-col gap-4">
                         <a>
                             <svg
@@ -39,7 +46,7 @@ const Footer = () => {
                         </a>
                     </div>
                 </nav>
-                <aside>
+                <aside data-aos="fade-up">
                     <p>
                         Copyright © 2023 - All right reserved by Event Planner
                         Ltd
