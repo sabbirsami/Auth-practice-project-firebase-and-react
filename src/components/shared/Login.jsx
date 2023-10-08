@@ -1,10 +1,40 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
 import { AuthContext } from "./AuthProvider";
 import toast from "react-hot-toast";
 const Login = () => {
-    const { signInWithGoogle } = useContext(AuthContext);
+    const { signInWithGoogle, loginUser } = useContext(AuthContext);
+
+    const [loading, setLoading] = useState(false);
+    const [alreadyUsedEmailMessage, setAlreadyUsedEmailMessage] = useState("");
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setLoading(true);
+        const email = e.target.email.value;
+        const password = e.target.password.value;
+        loginUser(email, password)
+            .then((result) => {
+                const user = result.user;
+                console.log(user);
+                setLoading(false);
+                setAlreadyUsedEmailMessage("");
+                toast.success("Successfully Login", {
+                    duration: 2000,
+                    className: "mt-32",
+                });
+            })
+            .catch((err) => {
+                console.log(err);
+                setLoading(false);
+                setAlreadyUsedEmailMessage(err.message);
+                toast.error(" Login fail", {
+                    duration: 2000,
+                    className: "mt-32",
+                });
+            });
+    };
     const handleSignInWithGoogle = () => {
         signInWithGoogle()
             .then((result) => {
@@ -31,7 +61,7 @@ const Login = () => {
             </h2>
             <div className="mx-auto flex justify-center ">
                 <div className=" border p-14">
-                    <form className="">
+                    <form className="" onSubmit={handleSubmit}>
                         <label
                             htmlFor="email"
                             className="block w-96 pb-2 font-semibold"
@@ -40,6 +70,7 @@ const Login = () => {
                         </label>
                         <input
                             type="email"
+                            name="email"
                             required
                             className="border w-full py-3 px-4 bg-slate-100"
                             placeholder="Enter your email address"
@@ -52,15 +83,23 @@ const Login = () => {
                         </label>
                         <input
                             type="password"
+                            name="password"
                             required
                             className="border w-full py-3 px-4 bg-slate-100"
                             placeholder="Enter your password"
                         />
+                        <label className="block w-96  text-sm text-red-600">
+                            {alreadyUsedEmailMessage}
+                        </label>
                         <button
                             type="submit"
                             className="w-full mt-8 py-3 bg-emerald-500 text-white"
                         >
-                            Submit
+                            {loading ? (
+                                <span className="loading loading-spinner loading-xs"></span>
+                            ) : (
+                                "Login"
+                            )}
                         </button>
                     </form>
                     <div className="divider">OR</div>
