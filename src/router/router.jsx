@@ -5,6 +5,7 @@ import ServiceDetails from "../components/services/ServiceDetails";
 import Login from "../components/shared/Login";
 import Register from "../components/shared/Register";
 import ConfirmService from "../components/services/ConfirmService";
+import PrivateRoute from "../components/shared/PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -16,8 +17,12 @@ const router = createBrowserRouter([
                 element: <Home />,
             },
             {
-                path: "/order",
-                element: <ConfirmService />,
+                path: "/purchase",
+                element: (
+                    <PrivateRoute>
+                        <ConfirmService />
+                    </PrivateRoute>
+                ),
             },
             {
                 path: "/service/:serviceId",
