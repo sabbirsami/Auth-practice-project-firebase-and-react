@@ -7,6 +7,7 @@ import Register from "../components/shared/Register";
 import ConfirmService from "../components/services/ConfirmService";
 import PrivateRoute from "../components/shared/PrivateRoute";
 import Error from "../components/shared/Error";
+import Contact from "../components/shared/Contact";
 
 const router = createBrowserRouter([
     {
@@ -17,6 +18,14 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home />,
+            },
+            {
+                path: "/contact",
+                element: (
+                    <PrivateRoute>
+                        <Contact />
+                    </PrivateRoute>
+                ),
             },
             {
                 path: "/purchase",

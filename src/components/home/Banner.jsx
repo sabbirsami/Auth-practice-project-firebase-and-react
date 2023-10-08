@@ -7,13 +7,13 @@ import event5 from "../../assets/event4.jpg";
 const Banner = () => {
     return (
         <div className="container mx-auto">
-            <div className="md:flex  block justify-between gap-10">
-                <div className="md:py-16 py-4">
-                    <h1 className="md:text-8xl text-4xl font-semibold heading-font md:py-32 py-4 px-1">
+            <div className="lg:flex  block justify-between gap-10">
+                <div className="lg:py-16 py-4">
+                    <h1 className="lg:text-8xl md:text-6xl text-4xl font-semibold heading-font lg:py-32 py-4 px-1">
                         Best Event Management Team in Dhaka City
                     </h1>
                 </div>
-                <div className="md:pt-32 bottom-0">
+                <div className="lg:pt-32 bottom-0">
                     <h2 className="text-sm pb-2">Some of our events photo*</h2>
                     <div className="carousel w-full">
                         <div
