@@ -89,11 +89,11 @@ const Register = () => {
                 <span className="divider w-28 border p-0  h-1 mx-auto bg-green-700"></span>
             </h2>
             <div className="mx-auto flex justify-center ">
-                <div className=" border p-14">
+                <div className=" border md:p-14 p-6">
                     <form className="" onSubmit={handleSubmit}>
                         <label
                             htmlFor="name"
-                            className="block w-96 pb-2 font-semibold"
+                            className="block md:w-96 w-full pb-2 font-semibold"
                         >
                             Name
                         </label>
@@ -106,7 +106,7 @@ const Register = () => {
                         />
                         <label
                             htmlFor="email"
-                            className="block w-96 pb-2  pt-8 font-semibold"
+                            className="block w-full pb-2  pt-8 font-semibold"
                         >
                             Photo URL
                         </label>
@@ -119,7 +119,7 @@ const Register = () => {
                         />
                         <label
                             htmlFor="email"
-                            className="block w-96 pb-2  pt-8 font-semibold"
+                            className="block w-full pb-2  pt-8 font-semibold"
                         >
                             Email address
                         </label>
@@ -143,10 +143,10 @@ const Register = () => {
                             className="border w-full py-3 px-4 bg-slate-100"
                             placeholder="Enter your password"
                         />
-                        <label className="block w-96 text-sm text-red-600">
+                        <label className="block md:w-96 w-full text-sm text-red-600">
                             {showPasswordValidationMessage}
                         </label>
-                        <label className="block w-96  text-sm text-red-600">
+                        <label className="block md:w-96 w-full  text-sm text-red-600">
                             {alreadyUsedEmailMessage}
                         </label>
 

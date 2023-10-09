@@ -13,7 +13,7 @@ const Navbar = () => {
             <div className="container mx-auto relative">
                 <div className="flex justify-between items-center py-8">
                     <div className="">
-                        <img className="w-80" src={logo} alt="" />
+                        <img className="md:w-72 w-48 " src={logo} alt="" />
                     </div>
                     <nav className="">
                         <ul className="lg:flex gap-6 items-center hidden ">
